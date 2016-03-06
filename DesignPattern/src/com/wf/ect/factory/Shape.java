@@ -1,4 +1,4 @@
-package com.wf.ect.ca;
+package com.wf.ect.factory;
 
 public interface Shape {
 	
