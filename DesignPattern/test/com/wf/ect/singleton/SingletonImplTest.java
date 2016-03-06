@@ -7,13 +7,12 @@ import org.junit.Test;
 
 public class SingletonImplTest {
    
-	SingletonImpl singletonImpl;
 	
 	@Test
-	public void testIfSingleObject(){
+	public void testGetSingletonObject(){
 		
-		singletonImpl=singletonImpl.getSingletonObject();
-		SingletonImpl newSingletonImplObj= singletonImpl.getSingletonObject();
+		SingletonImpl singletonImpl=SingletonImpl.getSingletonObject();
+		SingletonImpl newSingletonImplObj= SingletonImpl.getSingletonObject();
 		assertSame(singletonImpl, newSingletonImplObj);
 		
 	}
@@ -23,12 +22,7 @@ public class SingletonImplTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		singletonImpl= new SingletonImpl();
 	}
 
-	@Test
-	public void test() {
-		assertNotNull(singletonImpl);
-	}
-
+	
 }
